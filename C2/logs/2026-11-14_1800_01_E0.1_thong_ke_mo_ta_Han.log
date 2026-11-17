@@ -1,0 +1,15 @@
+2026-11-14 18:00:54 | INFO | Bắt đầu chạy 01_E0.1_thong_ke_mo_ta_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification/logs/2026-11-14_1800_01_E0.1_thong_ke_mo_ta_Han.log
+2026-11-14 18:00:55 | INFO | ROOT: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification
+train: (14396, 18) | test: (3600, 17)
+2026-11-14 18:00:55 | INFO | Bảng mô tả cột: 16 cột, 0 cột chưa có mô tả
+2026-11-14 18:00:55 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:00:55 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+duration_in min/ms: 2075 bài ghi theo phút (giá trị < 30), 12321 bài ghi theo mili giây.
+Giá trị key có trong dữ liệu: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] → không có key = 0 (nốt Đô) nhưng có 1609 ô trống.
+9107 bài (63.3%) thuộc nghệ sĩ có ≥ 2 bài; 62.6% trong số đó cùng thể loại với các bài khác của nghệ sĩ.
+2026-11-14 18:00:57 | INFO | Tóm tắt E0.1:
+E0.1 (C2): 14396 bài train, 3600 bài test, 11 thể loại, 14 đặc trưng số + 2 cột văn bản (Artist Name, Track Name).
+  Mất cân bằng lớp: lớp 10 có 3959 bài, lớp 4 có 310 bài (gấp 12.8 lần).
+  Thiếu: instrumentalness (25%), key (11%), Popularity (2%).
+  duration_in min/ms lẫn 2 đơn vị (2075 bài ghi theo phút); key không có giá trị 0 nên ô trống nhiều khả năng là key = 0.
+  63% bài của nghệ sĩ có ≥ 2 bài cùng thể loại với các bài khác của nghệ sĩ đó; 64% nghệ sĩ ở test đã có trong train.

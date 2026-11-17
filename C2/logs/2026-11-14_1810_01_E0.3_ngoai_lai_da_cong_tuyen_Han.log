@@ -1,0 +1,13 @@
+2026-11-14 18:10:11 | INFO | Bắt đầu chạy 01_E0.3_ngoai_lai_da_cong_tuyen_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification/logs/2026-11-14_1810_01_E0.3_ngoai_lai_da_cong_tuyen_Han.log
+2026-11-14 18:10:13 | INFO | ROOT: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification
+train: (14396, 18) | test: (3600, 17)
+2026-11-14 18:10:13 | INFO | 14 đặc trưng số, 11 thể loại, macro-F1 ngẫu nhiên ≈ 0.091
+Đặc trưng có ngoại lai cực đoan:
+Cặp |tương quan| > 0.7:
+dac_trung_1  dac_trung_2  tuong_quan
+     energy     loudness        0.77
+     energy acousticness       -0.75
+VIF lớn nhất: energy 4.32
+2026-11-14 18:10:13 | INFO | Tóm tắt E0.3:
+E0.3 (C2): ngoại lai cực đoan nhiều nhất ở instrumentalness (18.1%), speechiness (7.1%), liveness (1.8%).
+  Cặp tương quan > 0.7: energy–loudness (0.77); energy–acousticness (-0.75). VIF lớn nhất energy = 4.3.

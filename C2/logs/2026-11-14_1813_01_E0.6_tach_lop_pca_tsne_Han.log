@@ -1,0 +1,8 @@
+2026-11-14 18:13:40 | INFO | Bắt đầu chạy 01_E0.6_tach_lop_pca_tsne_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification/logs/2026-11-14_1813_01_E0.6_tach_lop_pca_tsne_Han.log
+2026-11-14 18:13:41 | INFO | ROOT: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification
+train: (14396, 18) | test: (3600, 17)
+2026-11-14 18:13:41 | INFO | 14 đặc trưng số, 11 thể loại, macro-F1 ngẫu nhiên ≈ 0.091
+Silhouette toàn bộ: -0.049. PCA 2 chiều giữ 33% phương sai.
+2026-11-14 18:13:53 | INFO | Tóm tắt E0.6:
+E0.6 (C2): silhouette theo thể loại = -0.05 (gần 0 là chồng lấn); PCA 2 chiều giữ 33% phương sai.
+  Thể loại tách rõ nhất: 7, 5; chồng lấn nhiều nhất: 4, 1.

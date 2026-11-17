@@ -1,0 +1,65 @@
+2026-11-14 18:16:06 | INFO | Bắt đầu chạy 00_EDA_tong_hop_C2_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification/logs/2026-11-14_1816_00_EDA_tong_hop_C2_Han.log
+2026-11-14 18:16:08 | INFO | ROOT: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification
+train: (14396, 18) | test: (3600, 17)
+2026-11-14 18:16:08 | INFO | Bảng mô tả cột: 16 cột, 0 cột chưa có mô tả
+2026-11-14 18:16:08 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:08 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+duration_in min/ms: 2075 bài ghi theo phút (giá trị < 30), 12321 bài ghi theo mili giây.
+Giá trị key có trong dữ liệu: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] → không có key = 0 (nốt Đô) nhưng có 1609 ô trống.
+9107 bài (63.3%) thuộc nghệ sĩ có ≥ 2 bài; 62.6% trong số đó cùng thể loại với các bài khác của nghệ sĩ.
+2026-11-14 18:16:09 | INFO | Tóm tắt E0.1:
+E0.1 (C2): 14396 bài train, 3600 bài test, 11 thể loại, 14 đặc trưng số + 2 cột văn bản (Artist Name, Track Name).
+  Mất cân bằng lớp: lớp 10 có 3959 bài, lớp 4 có 310 bài (gấp 12.8 lần).
+  Thiếu: instrumentalness (25%), key (11%), Popularity (2%).
+  duration_in min/ms lẫn 2 đơn vị (2075 bài ghi theo phút); key không có giá trị 0 nên ô trống nhiều khả năng là key = 0.
+  63% bài của nghệ sĩ có ≥ 2 bài cùng thể loại với các bài khác của nghệ sĩ đó; 64% nghệ sĩ ở test đã có trong train.
+Macro-F1 nếu đoán ngẫu nhiên đều các lớp ≈ 0.091
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:14 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:16:15 | INFO | Tóm tắt E0.2:
+E0.2 (C2): xếp hạng đặc trưng: acousticness, energy, danceability, speechiness, loudness, instrumentalness, Popularity, valence, duration_min, tempo.
+  Đặc trưng đơn lẻ tốt nhất: energy (macro-F1 = 0.153, ngẫu nhiên ≈ 0.091).
+Đặc trưng có ngoại lai cực đoan:
+Cặp |tương quan| > 0.7:
+dac_trung_1  dac_trung_2  tuong_quan
+     energy     loudness        0.77
+     energy acousticness       -0.75
+VIF lớn nhất: energy 4.32
+2026-11-14 18:16:15 | INFO | Tóm tắt E0.3:
+E0.3 (C2): ngoại lai cực đoan nhiều nhất ở instrumentalness (18.1%), speechiness (7.1%), liveness (1.8%).
+  Cặp tương quan > 0.7: energy–loudness (0.77); energy–acousticness (-0.75). VIF lớn nhất energy = 4.3.
+Sweet spot: 12 đặc trưng, macro-F1 = 0.373 (cao nhất 0.374)
+Thứ tự SFS chọn: energy, speechiness, instrumentalness, acousticness, Popularity, valence, danceability, duration_min, loudness, time_signature, mode, liveness, key, tempo
+2026-11-14 18:16:28 | INFO | Tóm tắt E0.4:
+E0.4 (C2): sweet spot 12 đặc trưng, macro-F1 = 0.373 (dùng hết 14: 0.374).
+  SFS chọn: energy, speechiness, instrumentalness, acousticness, Popularity, valence, danceability, duration_min, loudness, time_signature, mode, liveness.
+Trong mỗi fold, 59% bài có nghệ sĩ đã gặp ở phần huấn luyện (ở tập test thật: 64%); với các bài này, đoán theo nghệ sĩ đúng 63%.
+2026-11-14 18:16:30 | INFO | Tóm tắt E0.5:
+E0.5 (C2): macro-F1 chỉ âm thanh 0.374, chỉ nghệ sĩ 0.445, âm thanh + nghệ sĩ 0.535.
+  59% bài có nghệ sĩ đã gặp (test thật: 64%); với các bài này đoán theo nghệ sĩ đúng 63%.
+Silhouette toàn bộ: -0.049. PCA 2 chiều giữ 33% phương sai.
+2026-11-14 18:16:41 | INFO | Tóm tắt E0.6:
+E0.6 (C2): silhouette theo thể loại = -0.05 (gần 0 là chồng lấn); PCA 2 chiều giữ 33% phương sai.
+  Thể loại tách rõ nhất: 7, 5; chồng lấn nhiều nhất: 4, 1.
+2026-11-14 18:16:41 | INFO | Tóm tắt EDA tổng hợp:
+E0.1 (C2): 14396 bài train, 3600 bài test, 11 thể loại, 14 đặc trưng số + 2 cột văn bản (Artist Name, Track Name).
+  Mất cân bằng lớp: lớp 10 có 3959 bài, lớp 4 có 310 bài (gấp 12.8 lần).
+  Thiếu: instrumentalness (25%), key (11%), Popularity (2%).
+  duration_in min/ms lẫn 2 đơn vị (2075 bài ghi theo phút); key không có giá trị 0 nên ô trống nhiều khả năng là key = 0.
+  63% bài của nghệ sĩ có ≥ 2 bài cùng thể loại với các bài khác của nghệ sĩ đó; 64% nghệ sĩ ở test đã có trong train.
+E0.2 (C2): xếp hạng đặc trưng: acousticness, energy, danceability, speechiness, loudness, instrumentalness, Popularity, valence, duration_min, tempo.
+  Đặc trưng đơn lẻ tốt nhất: energy (macro-F1 = 0.153, ngẫu nhiên ≈ 0.091).
+E0.3 (C2): ngoại lai cực đoan nhiều nhất ở instrumentalness (18.1%), speechiness (7.1%), liveness (1.8%).
+  Cặp tương quan > 0.7: energy–loudness (0.77); energy–acousticness (-0.75). VIF lớn nhất energy = 4.3.
+E0.4 (C2): sweet spot 12 đặc trưng, macro-F1 = 0.373 (dùng hết 14: 0.374).
+  SFS chọn: energy, speechiness, instrumentalness, acousticness, Popularity, valence, danceability, duration_min, loudness, time_signature, mode, liveness.
+E0.5 (C2): macro-F1 chỉ âm thanh 0.374, chỉ nghệ sĩ 0.445, âm thanh + nghệ sĩ 0.535.
+  59% bài có nghệ sĩ đã gặp (test thật: 64%); với các bài này đoán theo nghệ sĩ đúng 63%.
+E0.6 (C2): silhouette theo thể loại = -0.05 (gần 0 là chồng lấn); PCA 2 chiều giữ 33% phương sai.
+  Thể loại tách rõ nhất: 7, 5; chồng lấn nhiều nhất: 4, 1.

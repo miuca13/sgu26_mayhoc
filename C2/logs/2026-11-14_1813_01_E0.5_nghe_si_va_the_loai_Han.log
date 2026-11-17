@@ -1,0 +1,8 @@
+2026-11-14 18:13:20 | INFO | Bắt đầu chạy 01_E0.5_nghe_si_va_the_loai_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification/logs/2026-11-14_1813_01_E0.5_nghe_si_va_the_loai_Han.log
+2026-11-14 18:13:22 | INFO | ROOT: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification
+train: (14396, 18) | test: (3600, 17)
+2026-11-14 18:13:22 | INFO | 14 đặc trưng số, 11 thể loại, macro-F1 ngẫu nhiên ≈ 0.091
+Trong mỗi fold, 59% bài có nghệ sĩ đã gặp ở phần huấn luyện (ở tập test thật: 64%); với các bài này, đoán theo nghệ sĩ đúng 63%.
+2026-11-14 18:13:23 | INFO | Tóm tắt E0.5:
+E0.5 (C2): macro-F1 chỉ âm thanh 0.374, chỉ nghệ sĩ 0.445, âm thanh + nghệ sĩ 0.535.
+  59% bài có nghệ sĩ đã gặp (test thật: 64%); với các bài này đoán theo nghệ sĩ đúng 63%.

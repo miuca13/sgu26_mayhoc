@@ -1,0 +1,16 @@
+2026-11-14 18:05:52 | INFO | Bắt đầu chạy 01_E0.2_xep_hang_dac_trung_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification/logs/2026-11-14_1805_01_E0.2_xep_hang_dac_trung_Han.log
+2026-11-14 18:05:54 | INFO | ROOT: /Users/caongochan/Documents/Challenge_2_Music_Genre_Classification
+train: (14396, 18) | test: (3600, 17)
+2026-11-14 18:05:54 | INFO | 14 đặc trưng số, 11 thể loại, macro-F1 ngẫu nhiên ≈ 0.091
+Macro-F1 nếu đoán ngẫu nhiên đều các lớp ≈ 0.091
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-14 18:05:59 | INFO | Tóm tắt E0.2:
+E0.2 (C2): xếp hạng đặc trưng: acousticness, energy, danceability, speechiness, loudness, instrumentalness, Popularity, valence, duration_min, tempo.
+  Đặc trưng đơn lẻ tốt nhất: energy (macro-F1 = 0.153, ngẫu nhiên ≈ 0.091).
