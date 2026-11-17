@@ -1,0 +1,9 @@
+2026-11-13 18:36:02 | INFO | Bắt đầu chạy 01_E0.2_xep_hang_dac_trung_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_1_House_Prices/logs/2026-11-13_1836_01_E0.2_xep_hang_dac_trung_Han.log
+2026-11-13 18:36:04 | INFO | ROOT: /Users/caongochan/Documents/Challenge_1_House_Prices
+train: (1460, 81) | test: (1459, 80)
+2026-11-13 18:36:04 | INFO | 79 đặc trưng (36 số, 43 phân loại)
+Cặp đặc trưng tương quan > 0.8 (gợi ý cho E0.3): [('GarageCars', 'GarageArea', np.float64(0.85)), ('TotalBsmtSF', '1stFlrSF', np.float64(0.83)), ('YearBuilt', 'GarageYrBlt', np.float64(0.85))]
+2026-11-13 18:36:06 | INFO | Tóm tắt E0.2:
+E0.2 (C1): top 10 đặc trưng theo thứ hạng trung bình của 4 thước đo:
+  OverallQual, Neighborhood, GrLivArea, GarageCars, ExterQual, GarageArea, BsmtQual, KitchenQual, TotalBsmtSF, YearBuilt.
+  Đặc trưng đơn lẻ tốt nhất: OverallQual (R² CV = 0.661).

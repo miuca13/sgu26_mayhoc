@@ -1,0 +1,55 @@
+2026-11-13 18:46:00 | INFO | Bắt đầu chạy 00_EDA_tong_hop_C1_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_1_House_Prices/logs/2026-11-13_1846_00_EDA_tong_hop_C1_Han.log
+2026-11-13 18:46:01 | INFO | ROOT: /Users/caongochan/Documents/Challenge_1_House_Prices
+train: (1460, 81) | test: (1459, 80)
+2026-11-13 18:46:01 | INFO | Bảng mô tả cột: 79 cột, 0 cột không tìm thấy mô tả
+Số đặc trưng số lệch mạnh (|skew| > 1): 19
+2026-11-13 18:46:02 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-13 18:46:02 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-13 18:46:02 | INFO | Tóm tắt E0.1:
+E0.1 (C1): 1460 mẫu train, 1459 mẫu test, 79 đặc trưng (36 số, 43 phân loại).
+  19 cột có giá trị thiếu; thiếu nhiều nhất: PoolQC (100%), MiscFeature (96%), Alley (94%), Fence (81%).
+  SalePrice lệch phải (skew = 1.88); sau log còn 0.12 → dùng log(1+SalePrice) làm mục tiêu.
+  19 đặc trưng số lệch mạnh (|skew| > 1).
+Cặp đặc trưng tương quan > 0.8 (gợi ý cho E0.3): [('GarageCars', 'GarageArea', np.float64(0.85)), ('TotalBsmtSF', '1stFlrSF', np.float64(0.83)), ('YearBuilt', 'GarageYrBlt', np.float64(0.85))]
+2026-11-13 18:46:04 | INFO | Tóm tắt E0.2:
+E0.2 (C1): top 10 đặc trưng theo thứ hạng trung bình của 4 thước đo:
+  OverallQual, Neighborhood, GrLivArea, GarageCars, ExterQual, GarageArea, BsmtQual, KitchenQual, TotalBsmtSF, YearBuilt.
+  Đặc trưng đơn lẻ tốt nhất: OverallQual (R² CV = 0.661).
+Số đặc trưng số có ngoại lai cực đoan: 13
+Căn diện tích > 4000 nhưng giá < 300k (Id): [524, 1299]
+Số căn có |z phần dư| > 3: 13
+Cặp |tương quan| > 0.8:
+dac_trung_1  dac_trung_2  tuong_quan
+ GarageCars   GarageArea        0.88
+  GrLivArea TotRmsAbvGrd        0.83
+TotalBsmtSF     1stFlrSF        0.82
+
+Đặc trưng VIF = ∞ (là tổng của các cột khác): ['BsmtFinSF2', 'LowQualFinSF', 'BsmtFinSF1', 'GrLivArea', 'BsmtUnfSF', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF']
+Đặc trưng VIF > 10: []
+2026-11-13 18:46:05 | INFO | Tóm tắt E0.3:
+E0.3 (C1): 13 đặc trưng số có ngoại lai cực đoan (ngoài 3·IQR); 13 căn có giá bất thường (|z phần dư| > 3).
+  Căn diện tích > 4000 nhưng giá < 300k: Id [524, 1299] → đề xuất bỏ khi huấn luyện.
+  3 cặp tương quan > 0.8: GarageCars–GarageArea (0.88); GrLivArea–TotRmsAbvGrd (0.83); TotalBsmtSF–1stFlrSF (0.82).
+  VIF = ∞ (là tổng các cột khác): BsmtFinSF2, LowQualFinSF, BsmtFinSF1, GrLivArea, BsmtUnfSF, TotalBsmtSF, 1stFlrSF, 2ndFlrSF.
+Sweet spot: 19 đặc trưng, R² = 0.918 (cao nhất 0.923 ở k = 30)
+Thứ tự SFS chọn: OverallQual, GrLivArea, Neighborhood, BsmtFinSF1, OverallCond, YearBuilt, TotalBsmtSF, GarageCars, BldgType, MSZoning, SaleCondition, LotArea, CentralAir, KitchenQual, Functional, BsmtExposure, Condition1, ScreenPorch, Fireplaces
+2026-11-13 18:46:13 | INFO | Tóm tắt E0.4:
+E0.4 (C1): sweet spot 19 đặc trưng, R² CV = 0.918 (cao nhất 0.923); top-19 theo E0.2 chỉ đạt 0.882.
+  SFS chọn: OverallQual, GrLivArea, Neighborhood, BsmtFinSF1, OverallCond, YearBuilt, TotalBsmtSF, GarageCars, BldgType, MSZoning, SaleCondition, LotArea, CentralAir, KitchenQual, Functional, BsmtExposure, Condition1, ScreenPorch, Fireplaces.
+2026-11-13 18:46:13 | INFO | Tóm tắt EDA tổng hợp:
+E0.1 (C1): 1460 mẫu train, 1459 mẫu test, 79 đặc trưng (36 số, 43 phân loại).
+  19 cột có giá trị thiếu; thiếu nhiều nhất: PoolQC (100%), MiscFeature (96%), Alley (94%), Fence (81%).
+  SalePrice lệch phải (skew = 1.88); sau log còn 0.12 → dùng log(1+SalePrice) làm mục tiêu.
+  19 đặc trưng số lệch mạnh (|skew| > 1).
+
+E0.2 (C1): top 10 đặc trưng theo thứ hạng trung bình của 4 thước đo:
+  OverallQual, Neighborhood, GrLivArea, GarageCars, ExterQual, GarageArea, BsmtQual, KitchenQual, TotalBsmtSF, YearBuilt.
+  Đặc trưng đơn lẻ tốt nhất: OverallQual (R² CV = 0.661).
+
+E0.3 (C1): 13 đặc trưng số có ngoại lai cực đoan (ngoài 3·IQR); 13 căn có giá bất thường (|z phần dư| > 3).
+  Căn diện tích > 4000 nhưng giá < 300k: Id [524, 1299] → đề xuất bỏ khi huấn luyện.
+  3 cặp tương quan > 0.8: GarageCars–GarageArea (0.88); GrLivArea–TotRmsAbvGrd (0.83); TotalBsmtSF–1stFlrSF (0.82).
+  VIF = ∞ (là tổng các cột khác): BsmtFinSF2, LowQualFinSF, BsmtFinSF1, GrLivArea, BsmtUnfSF, TotalBsmtSF, 1stFlrSF, 2ndFlrSF.
+
+E0.4 (C1): sweet spot 19 đặc trưng, R² CV = 0.918 (cao nhất 0.923); top-19 theo E0.2 chỉ đạt 0.882.
+  SFS chọn: OverallQual, GrLivArea, Neighborhood, BsmtFinSF1, OverallCond, YearBuilt, TotalBsmtSF, GarageCars, BldgType, MSZoning, SaleCondition, LotArea, CentralAir, KitchenQual, Functional, BsmtExposure, Condition1, ScreenPorch, Fireplaces.

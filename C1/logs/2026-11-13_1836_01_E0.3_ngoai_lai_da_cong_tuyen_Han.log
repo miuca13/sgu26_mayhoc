@@ -1,0 +1,21 @@
+2026-11-13 18:36:46 | INFO | Bắt đầu chạy 01_E0.3_ngoai_lai_da_cong_tuyen_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_1_House_Prices/logs/2026-11-13_1836_01_E0.3_ngoai_lai_da_cong_tuyen_Han.log
+2026-11-13 18:36:47 | INFO | ROOT: /Users/caongochan/Documents/Challenge_1_House_Prices
+train: (1460, 81) | test: (1459, 80)
+2026-11-13 18:36:48 | INFO | 79 đặc trưng (36 số, 43 phân loại)
+2026-11-13 18:36:48 | INFO | Đã đọc xếp hạng E0.2: 79 đặc trưng, top 3 = ['OverallQual', 'Neighborhood', 'GrLivArea']
+Số đặc trưng số có ngoại lai cực đoan: 13
+Căn diện tích > 4000 nhưng giá < 300k (Id): [524, 1299]
+Số căn có |z phần dư| > 3: 13
+Cặp |tương quan| > 0.8:
+dac_trung_1  dac_trung_2  tuong_quan
+ GarageCars   GarageArea        0.88
+  GrLivArea TotRmsAbvGrd        0.83
+TotalBsmtSF     1stFlrSF        0.82
+
+Đặc trưng VIF = ∞ (là tổng của các cột khác): ['BsmtFinSF2', 'LowQualFinSF', 'BsmtFinSF1', 'GrLivArea', 'BsmtUnfSF', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF']
+Đặc trưng VIF > 10: []
+2026-11-13 18:36:48 | INFO | Tóm tắt E0.3:
+E0.3 (C1): 13 đặc trưng số có ngoại lai cực đoan (ngoài 3·IQR); 13 căn có giá bất thường (|z phần dư| > 3).
+  Căn diện tích > 4000 nhưng giá < 300k: Id [524, 1299] → đề xuất bỏ khi huấn luyện.
+  3 cặp tương quan > 0.8: GarageCars–GarageArea (0.88); GrLivArea–TotRmsAbvGrd (0.83); TotalBsmtSF–1stFlrSF (0.82).
+  VIF = ∞ (là tổng các cột khác): BsmtFinSF2, LowQualFinSF, BsmtFinSF1, GrLivArea, BsmtUnfSF, TotalBsmtSF, 1stFlrSF, 2ndFlrSF.

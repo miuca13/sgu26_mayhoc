@@ -1,0 +1,11 @@
+2026-11-13 18:36:59 | INFO | Bắt đầu chạy 01_E0.4_so_dac_trung_toi_uu_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_1_House_Prices/logs/2026-11-13_1836_01_E0.4_so_dac_trung_toi_uu_Han.log
+2026-11-13 18:37:01 | INFO | ROOT: /Users/caongochan/Documents/Challenge_1_House_Prices
+train: (1460, 81) | test: (1459, 80)
+2026-11-13 18:37:01 | INFO | 79 đặc trưng (36 số, 43 phân loại)
+2026-11-13 18:37:01 | INFO | Đã đọc xếp hạng E0.2: 79 đặc trưng, top 3 = ['OverallQual', 'Neighborhood', 'GrLivArea']
+2026-11-13 18:37:01 | INFO | Căn diện tích > 4000 nhưng giá < 300k (Id): [524, 1299]
+Sweet spot: 19 đặc trưng, R² = 0.918 (cao nhất 0.923 ở k = 30)
+Thứ tự SFS chọn: OverallQual, GrLivArea, Neighborhood, BsmtFinSF1, OverallCond, YearBuilt, TotalBsmtSF, GarageCars, BldgType, MSZoning, SaleCondition, LotArea, CentralAir, KitchenQual, Functional, BsmtExposure, Condition1, ScreenPorch, Fireplaces
+2026-11-13 18:37:10 | INFO | Tóm tắt E0.4:
+E0.4 (C1): sweet spot 19 đặc trưng, R² CV = 0.918 (cao nhất 0.923); top-19 theo E0.2 chỉ đạt 0.882.
+  SFS chọn: OverallQual, GrLivArea, Neighborhood, BsmtFinSF1, OverallCond, YearBuilt, TotalBsmtSF, GarageCars, BldgType, MSZoning, SaleCondition, LotArea, CentralAir, KitchenQual, Functional, BsmtExposure, Condition1, ScreenPorch, Fireplaces.

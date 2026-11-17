@@ -1,0 +1,12 @@
+2026-11-15 21:23:05 | INFO | Bắt đầu chạy 01_E0.1_thong_ke_mo_ta_Han – người chạy: Han – file log: /Users/caongochan/Documents/Challenge_1_House_Prices/logs/eda_log/2026-11-15_2123_01_E0.1_thong_ke_mo_ta_Han.log
+2026-11-15 21:23:07 | INFO | ROOT: /Users/caongochan/Documents/Challenge_1_House_Prices
+train: (1460, 81) | test: (1459, 80)
+2026-11-15 21:23:07 | INFO | Bảng mô tả cột: 79 cột, 0 cột không tìm thấy mô tả
+Số đặc trưng số lệch mạnh (|skew| > 1): 19
+2026-11-15 21:23:07 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-15 21:23:07 | INFO | Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-11-15 21:23:08 | INFO | Tóm tắt E0.1:
+E0.1 (C1): 1460 mẫu train, 1459 mẫu test, 79 đặc trưng (36 số, 43 phân loại).
+  19 cột có giá trị thiếu; thiếu nhiều nhất: PoolQC (100%), MiscFeature (96%), Alley (94%), Fence (81%).
+  SalePrice lệch phải (skew = 1.88); sau log còn 0.12 → dùng log(1+SalePrice) làm mục tiêu.
+  19 đặc trưng số lệch mạnh (|skew| > 1).
