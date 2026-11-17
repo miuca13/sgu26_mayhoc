@@ -1,0 +1,76 @@
+2026-11-13 19:40:49 | INFO | Bắt đầu chạy 01_cleaning – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/2026-11-13_1940_01_cleaning.log
+Số dòng: 2.075.259 | Số cột: 9
+Khớp Proposal: True
+Dòng trùng lặp hoàn toàn: 0 | Mốc thời gian trùng: 0
+Global_active_power      float64
+Global_reactive_power    float64
+Voltage                  float64
+Global_intensity         float64
+Sub_metering_1           float64
+Sub_metering_2           float64
+Sub_metering_3           float64
+dtype: object
+Mốc đầu: 2006-12-16 17:24:00 | Mốc cuối: 2010-11-26 21:02:00
+Số phút lý thuyết: 2.075.259 | Số dòng có trong tệp: 2.075.259
+Số mốc phút vắng mặt hoàn toàn: 0
+Thiếu theo cột:
+ Global_active_power      25979
+Global_reactive_power    25979
+Voltage                  25979
+Global_intensity         25979
+Sub_metering_1           25979
+Sub_metering_2           25979
+Sub_metering_3           25979
+dtype: int64
+Số cột bị thiếu trong mỗi dòng:
+ 0    2049280
+7      25979
+Name: count, dtype: int64
+Chỉ có 2 trạng thái (đủ cả 7 cột hoặc thiếu cả 7 cột): True
+Số khoảng thiếu: 71 | Dài nhất: 7226 phút (120.4 giờ)
+Khoảng thiếu <= 60 phút: 62 | > 120 phút: 7
+Công suất âm: 0 | Intensity âm: 0 | Sub_metering âm: 0
+Global_active_power = 0: 0
+Voltage ngoài [200, 260] V: 0
+Phút mà tổng 3 công tơ phụ > tổng điện năng cả hộ: 1050
+                           min      max
+Global_active_power      0.076   11.122
+Global_reactive_power    0.000    1.390
+Voltage                223.200  254.150
+Global_intensity         0.200   48.400
+Sub_metering_1           0.000   88.000
+Sub_metering_2           0.000   80.000
+Sub_metering_3           0.000   31.000
+Số giờ sau tổng hợp: 34.588 | Từ 2006-12-16 17:00:00 đến 2010-11-26 20:00:00
+Giờ thiếu một phần (1..59 phút đo được): 83 | Giờ bị loại vì < 30 phút: 11
+Tổng số giờ: 34.588
+Giờ thiếu: 431 (1.25%) trong 12 khoảng, dài nhất 120 giờ
+Khoảng thiếu <= 2 giờ: 5 | > 2 giờ: 7
+Giờ đã điền tiến: 20 | Giờ còn NaN sau điền tiến: 411 (1.19%)
+Đã lưu: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/data/processed/hourly_clean.csv
+Kích thước: (34588, 17) | Trục giờ liên tục: True
+Các cột: ['Global_active_power', 'Global_reactive_power', 'Voltage', 'Global_intensity', 'Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3', 'Global_active_power_ffill', 'Global_reactive_power_ffill', 'Voltage_ffill', 'Global_intensity_ffill', 'Sub_metering_1_ffill', 'Sub_metering_2_ffill', 'Sub_metering_3_ffill', 'n_valid_min', 'is_missing', 'is_filled']
+=== TÓM TẮT SỐ LIỆU ===
+Số dòng gốc: 2.075.259 | Số cột: 9 | Trùng: 0
+Thời gian: 2006-12-16 17:24:00 -> 2010-11-26 21:02:00 | Mốc phút vắng mặt: 0
+Thiếu mỗi cột: 25.979 (1.252%) | Thiếu đồng thời 7 cột: True
+Khoảng thiếu (phút): 71 khoảng, dài nhất 7.226 phút (~120.4 giờ), > 2 giờ: 7
+Số giờ sau resample: 34.588 | Giờ thiếu: 431 (1.25%)
+Đã điền tiến: 20 giờ | Còn NaN: 411 giờ (1.19%)
+File giao: data/processed/hourly_clean.csv
+=== TÓM TẮT SỐ LIỆU ===
+Số dòng gốc: 2.075.259 | Số cột: 9 | Trùng: 0
+Thời gian: 2006-12-16 17:24:00 -> 2010-11-26 21:02:00 | Mốc phút vắng mặt: 0
+Thiếu mỗi cột: 25.979 (1.252%) | Thiếu đồng thời 7 cột: True
+Khoảng thiếu (phút): 71 khoảng, dài nhất 7.226 phút (~120.4 giờ), > 2 giờ: 7
+Số giờ sau resample: 34.588 | Giờ thiếu: 431 (1.25%)
+Đã điền tiến: 20 giờ | Còn NaN: 411 giờ (1.19%)
+File giao: data/processed/hourly_clean.csv
+=== TÓM TẮT SỐ LIỆU ===
+Số dòng gốc: 2.075.259 | Số cột: 9 | Trùng: 0
+Thời gian: 2006-12-16 17:24:00 -> 2010-11-26 21:02:00 | Mốc phút vắng mặt: 0
+Thiếu mỗi cột: 25.979 (1.252%) | Thiếu đồng thời 7 cột: True
+Khoảng thiếu (phút): 71 khoảng, dài nhất 7.226 phút (~120.4 giờ), > 2 giờ: 7
+Số giờ sau resample: 34.588 | Giờ thiếu: 431 (1.25%)
+Đã điền tiến: 20 giờ | Còn NaN: 411 giờ (1.19%)
+File giao: data/processed/hourly_clean.csv

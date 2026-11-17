@@ -1,0 +1,7 @@
+2026-11-13 19:30:56 | INFO | Bắt đầu chạy 00_E0.2_khoang_thieu_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/2026-11-13_1930_00_E0.2_khoang_thieu_Han.log
+2026-11-13 19:30:56 | INFO | ROOT: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy
+2026-11-13 19:30:56 | INFO | File dữ liệu: individual+household+electric+power+consumption.zip (19.68 MB)
+2026-11-13 19:31:00 | INFO | Đã đọc 2.075.259 dòng, từ 16/12/2006 17:24 đến 26/11/2010 21:02
+2026-11-13 19:31:00 | INFO | 71 khoảng thiếu, dài nhất 7226 phút (120.4 giờ, bắt đầu 17/08/2010 21:02)
+2026-11-13 19:31:00 | INFO | 3 tháng thiếu nhiều nhất: 08/2010 16.2%; 09/2010 12.1%; 04/2007 8.6%
+2026-11-13 19:31:00 | INFO | E0.2: 1 khó khăn dữ liệu, lưu ở data/eda_E0.2_kho_khan.csv

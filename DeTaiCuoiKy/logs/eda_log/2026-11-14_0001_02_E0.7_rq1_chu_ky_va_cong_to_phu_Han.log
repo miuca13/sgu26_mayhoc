@@ -1,0 +1,42 @@
+2026-11-14 00:01:53 | INFO | Bắt đầu chạy 02_E0.7_rq1_chu_ky_va_cong_to_phu_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/eda_log/2026-11-14_0001_02_E0.7_rq1_chu_ky_va_cong_to_phu_Han.log
+Tổng số giờ: 34.588 | Giờ có số đo thật: 34.157 | Giờ thiếu (bỏ qua): 431
+Khoảng thời gian: 2006-12-16 17:00:00 -> 2010-11-26 20:00:00
+Số giờ có số đo theo mùa:
+ season
+Xuân    8736
+Hè      8639
+Thu     8549
+Đông    8233
+Name: Global_active_power, dtype: int64
+Các đỉnh ACF cao nhất (độ trễ, hệ số): [(168, 0.461), (24, 0.436), (72, 0.412), (96, 0.403), (48, 0.401), (144, 0.397)]
+2026-11-14 00:01:54 | INFO | Gợi ý nhận xét E0.7 (số tự điền), lưu ở data/eda_E0.7_goi_y_nhan_xet.md:
+- **[RQ1-chu kỳ]** Hệ số tự tương quan tại độ trễ 1 giờ là 0,713; tại 12 giờ là 0,239; tại 24 giờ là 0,436; tại 48 giờ là 0,401; tại 168 giờ là 0,461.
+- **[RQ1-chu kỳ]** Các đỉnh tự tương quan cao nhất (không kể độ trễ 1) xuất hiện tại độ trễ: 168 giờ (0,461), 24 giờ (0,436), 72 giờ (0,412), 96 giờ (0,403), 48 giờ (0,401), 144 giờ (0,397).
+- **[RQ1-công tơ phụ]** Sub_metering_1 đạt trung bình cao nhất lúc 21h (169,2 Wh/giờ), thấp nhất lúc 5h (2,1 Wh/giờ).
+- **[RQ1-công tơ phụ]** Sub_metering_2 đạt trung bình cao nhất lúc 14h (148,5 Wh/giờ), thấp nhất lúc 5h (18,9 Wh/giờ).
+- **[RQ1-công tơ phụ]** Sub_metering_3 đạt trung bình cao nhất lúc 8h (759,5 Wh/giờ), thấp nhất lúc 3h (101,5 Wh/giờ).
+[34m[1mwandb[0m: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from /Users/caongochan/.netrc.
+[34m[1mwandb[0m: Currently logged in as: [33mcaongochan142[0m ([33msgu-mayhoc-nhom11[0m) to [32mhttps://api.forge.coreweave.com[0m. Use [1m`wandb login --relogin`[0m to force relogin
+[34m[1mwandb[0m: setting up run y9hs8r2h
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/eda/wandb/run-20261114_000155-y9hs8r2h[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-E0.7-Han-rq1-chu-ky-va-cong-to-phu[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/y9hs8r2h[0m
+2026-11-14 00:01:57 | INFO | Đã ghi W&B: https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/y9hs8r2h
+[34m[1mwandb[0m: updating run metadata; uploading artifact run-y9hs8r2h-bangeda_rq1_submeter_theo_gio-vgajxA
+[34m[1mwandb[0m: uploading artifact run-y9hs8r2h-bangeda_rq1_submeter_theo_gio-vgajxA
+[34m[1mwandb[0m: uploading media/html/ket_luan_0_e3508d652976e1277c32.html; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading media/table/bang/eda_rq1_submeter_theo_gio_0_86094ec5dd0811ef3493.table.json (+ 4 more)
+[34m[1mwandb[0m: uploading media/images/hinh/02_rq1_acf_0_89506f0d71a8da55cf4e.png; uploading media/images/hinh/02_rq1_submeter_theo_gio_0_6bcf476c209d3c2d03a8.png; uploading wandb-metadata.json; uploading requirements.txt
+[34m[1mwandb[0m: uploading history steps 0-0, summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m: acf_tre_168h 0.46128
+[34m[1mwandb[0m:   acf_tre_1h 0.7135
+[34m[1mwandb[0m:  acf_tre_24h 0.43605
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-E0.7-Han-rq1-chu-ky-va-cong-to-phu[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/y9hs8r2h[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 4 media file(s), 2 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000155-y9hs8r2h/logs[0m

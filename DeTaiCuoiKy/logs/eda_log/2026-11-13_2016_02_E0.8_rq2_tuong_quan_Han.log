@@ -1,0 +1,21 @@
+2026-11-13 20:16:04 | INFO | Bắt đầu chạy 02_E0.8_rq2_tuong_quan_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/2026-11-13_2016_02_E0.8_rq2_tuong_quan_Han.log
+Tổng số giờ: 34.588 | Giờ có số đo thật: 34.157 | Giờ thiếu (bỏ qua): 431
+Khoảng thời gian: 2006-12-16 17:00:00 -> 2010-11-26 20:00:00
+Số giờ có số đo theo mùa:
+ season
+Xuân    8736
+Hè      8639
+Thu     8549
+Đông    8233
+Name: Global_active_power, dtype: int64
+Số giờ dùng cho tương quan (đủ 7 cột): 34.157
+Số giờ dùng: 34.144
+2026-11-13 20:16:05 | INFO | Gợi ý nhận xét E0.8 (số tự điền), lưu ở data/eda_E0.8_goi_y_nhan_xet.md:
+- **[RQ2]** Voltage: Pearson r = -0,379 (mức yếu); Spearman ρ = -0,342 (mức yếu).
+- **[RQ2]** Global_intensity: Pearson r = 0,999 (mức mạnh); Spearman ρ = 0,998 (mức mạnh).
+- **[RQ2]** Sub_metering_1: Pearson r = 0,496 (mức trung bình); Spearman ρ = 0,442 (mức trung bình).
+- **[RQ2]** Sub_metering_2: Pearson r = 0,440 (mức trung bình); Spearman ρ = 0,188 (mức rất yếu). Hai hệ số chênh nhau trên 0,1: quan hệ có thể phi tuyến hoặc chịu ảnh hưởng của giá trị cực đoan.
+- **[RQ2]** Sub_metering_3: Pearson r = 0,696 (mức trung bình); Spearman ρ = 0,694 (mức trung bình).
+- **[RQ2-công tơ phụ]** Tỷ lệ điện năng ba công tơ phụ ghi nhận so với tổng điện năng cả hộ: Sub_metering_1 6,2%; Sub_metering_2 7,1%; Sub_metering_3 35,5%; phần còn lại không qua công tơ phụ nào chiếm 51,2%.
+- **[RQ2-tương quan trễ]** Tương quan Pearson giữa công suất giờ t+1 và biến tại giờ t, xếp từ cao xuống thấp: Global_intensity 0,714; Global_active_power 0,713; Sub_metering_3 0,455; Sub_metering_1 0,297; Voltage -0,288; Sub_metering_2 0,251; Global_reactive_power 0,238.
+- **[RQ2-so sánh]** So sánh với tương quan cùng giờ: Global_intensity cùng giờ có r = 0,999, còn Global_intensity giờ t với công suất giờ t+1 có r = 0,714.

@@ -1,0 +1,36 @@
+2026-11-14 00:00:32 | INFO | Bắt đầu chạy 00_E0.2_khoang_thieu_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/eda_log/2026-11-14_0000_00_E0.2_khoang_thieu_Han.log
+2026-11-14 00:00:32 | INFO | ROOT: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy
+2026-11-14 00:00:32 | INFO | File dữ liệu: individual+household+electric+power+consumption.zip (19.68 MB)
+2026-11-14 00:00:36 | INFO | Đã đọc 2.075.259 dòng, từ 16/12/2006 17:24 đến 26/11/2010 21:02
+2026-11-14 00:00:36 | INFO | 71 khoảng thiếu, dài nhất 7226 phút (120.4 giờ, bắt đầu 17/08/2010 21:02)
+2026-11-14 00:00:36 | INFO | 3 tháng thiếu nhiều nhất: 08/2010 16.2%; 09/2010 12.1%; 04/2007 8.6%
+2026-11-14 00:00:36 | INFO | E0.2: 1 khó khăn dữ liệu, lưu ở data/eda_E0.2_kho_khan.csv
+[34m[1mwandb[0m: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from /Users/caongochan/.netrc.
+[34m[1mwandb[0m: Currently logged in as: [33mcaongochan142[0m ([33msgu-mayhoc-nhom11[0m) to [32mhttps://api.forge.coreweave.com[0m. Use [1m`wandb login --relogin`[0m to force relogin
+[34m[1mwandb[0m: setting up run y1l5bvjk
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/eda/wandb/run-20261114_000037-y1l5bvjk[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-E0.2-Han-khoang-thieu[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/y1l5bvjk[0m
+2026-11-14 00:00:40 | INFO | Đã ghi W&B: https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/y1l5bvjk
+[34m[1mwandb[0m: updating run metadata; uploading artifact run-y1l5bvjk-bangeda_00_do_dai_khoang_thieu-DSU2NA
+[34m[1mwandb[0m: updating run metadata; uploading artifact run-y1l5bvjk-bangeda_00_do_dai_khoang_thieu-DSU2NA; uploading artifact run-y1l5bvjk-bangeda_00_thieu_theo_thang-BXCAgQ; uploading artifact run-y1l5bvjk-bangeda_E0.2_kho_khan-SrOuwg
+[34m[1mwandb[0m: updating run metadata; uploading artifact run-y1l5bvjk-bangeda_00_do_dai_khoang_thieu-DSU2NA; uploading artifact run-y1l5bvjk-bangeda_00_thieu_theo_thang-BXCAgQ; uploading artifact run-y1l5bvjk-bangeda_E0.2_kho_khan-SrOuwg; uploading wandb-summary.json (+ 8 more)
+[34m[1mwandb[0m: uploading artifact run-y1l5bvjk-bangeda_00_do_dai_khoang_thieu-DSU2NA; uploading artifact run-y1l5bvjk-bangeda_00_thieu_theo_thang-BXCAgQ; uploading artifact run-y1l5bvjk-bangeda_E0.2_kho_khan-SrOuwg; uploading requirements.txt; uploading media/html/ket_luan_0_fabf3c48a1d3758afd9a.html (+ 4 more)
+[34m[1mwandb[0m: uploading artifact run-y1l5bvjk-bangeda_00_do_dai_khoang_thieu-DSU2NA; uploading artifact run-y1l5bvjk-bangeda_00_thieu_theo_thang-BXCAgQ; uploading artifact run-y1l5bvjk-bangeda_E0.2_kho_khan-SrOuwg
+[34m[1mwandb[0m: uploading artifact run-y1l5bvjk-bangeda_00_thieu_theo_thang-BXCAgQ; uploading artifact run-y1l5bvjk-bangeda_E0.2_kho_khan-SrOuwg
+[34m[1mwandb[0m: uploading artifact run-y1l5bvjk-bangeda_E0.2_kho_khan-SrOuwg
+[34m[1mwandb[0m: uploading config.yaml
+[34m[1mwandb[0m: uploading history steps 0-0, summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m: khoang_dai_nhat_phut 7226
+[34m[1mwandb[0m:      so_khoang_thieu 71
+[34m[1mwandb[0m: so_khoang_tren_2_gio 7
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-E0.2-Han-khoang-thieu[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/y1l5bvjk[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 5 media file(s), 6 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000037-y1l5bvjk/logs[0m

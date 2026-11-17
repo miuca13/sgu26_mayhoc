@@ -1,0 +1,125 @@
+2026-11-13 20:00:17 | INFO | Bắt đầu chạy 00_EDA_tong_hop_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/2026-11-13_2000_00_EDA_tong_hop_Han.log
+2026-11-13 20:00:19 | INFO | ROOT: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy
+2026-11-13 20:00:19 | INFO | File dữ liệu: individual+household+electric+power+consumption.zip (19.68 MB)
+2026-11-13 20:00:21 | INFO | Số dòng: 2.075.259 | Số cột: 9
+5 dòng đầu:
+Kiểu cột nếu đọc theo mặc định của pandas (không khai báo giá trị thiếu):
+Date                         str
+Time                         str
+Global_active_power          str
+Global_reactive_power        str
+Voltage                      str
+Global_intensity             str
+Sub_metering_1               str
+Sub_metering_2               str
+Sub_metering_3           float64
+2026-11-13 20:00:21 | INFO | 6/7 cột đo bị đọc thành chuỗi thay vì số: ['Global_active_power', 'Global_reactive_power', 'Voltage', 'Global_intensity', 'Sub_metering_1', 'Sub_metering_2']
+Số cột bị thiếu trên mỗi dòng → số dòng:
+0    2049280
+7      25979
+2026-11-13 20:00:22 | INFO | Thiếu đồng thời cả 7 cột trên cùng một dòng: True
+Ví dụ Date: ['16/12/2006', '17/12/2006', '26/11/2010'] | Time: ['17:24:00', '21:02:00']
+2026-11-13 20:00:25 | INFO | Từ 16/12/2006 17:24 đến 26/11/2010 21:02
+2026-11-13 20:00:25 | INFO | Bước thời gian giữa 2 dòng liên tiếp: {'0 days 00:01:00': 2075258}
+2026-11-13 20:00:26 | INFO | Mốc thời gian trùng: 0 | Dòng trùng hoàn toàn: 0
+2026-11-13 20:00:26 | INFO | Tháng đầu 2006-12: 21.996/44.640 phút (49%); tháng cuối 2010-11: 37.263/43.200 phút (86%)
+2026-11-13 20:00:26 | INFO | E0.1: 3 khó khăn dữ liệu, lưu ở data/eda_E0.1_kho_khan.csv
+2026-11-13 20:00:26 | INFO | 71 khoảng thiếu, dài nhất 7226 phút (120.4 giờ, bắt đầu 17/08/2010 21:02)
+2026-11-13 20:00:26 | INFO | 3 tháng thiếu nhiều nhất: 08/2010 16.2%; 09/2010 12.1%; 04/2007 8.6%
+2026-11-13 20:00:26 | INFO | E0.2: 1 khó khăn dữ liệu, lưu ở data/eda_E0.2_kho_khan.csv
+2026-11-13 20:00:29 | INFO | Độ lệch Global_active_power mức phút: 1.79
+2026-11-13 20:00:29 | INFO | Tỉ lệ giá trị bằng 0: Sub_metering_1 91.7%; Sub_metering_2 70.1%; Sub_metering_3 41.6%
+2026-11-13 20:00:29 | INFO | Tương quan Global_active_power – Global_intensity (mức phút): r = 0.9989
+2026-11-13 20:00:30 | INFO | P / (V × I): trung vị 0.992; 5.75% số phút lớn hơn 1,05
+2026-11-13 20:00:30 | INFO | Phút có tổng 3 công tơ phụ lớn hơn điện năng cả hộ: 1.050 (0.051%), âm nhiều nhất -2.4 Wh
+2026-11-13 20:00:30 | INFO | Tỉ trọng điện năng: Sub_metering_1 6.2%; Sub_metering_2 7.1%; Sub_metering_3 35.5%; còn lại 51.2%
+2026-11-13 20:00:30 | INFO | Ngày minh hoạ 01/01/2008: độ lệch chuẩn mức phút 1.026 kW, mức giờ 0.803 kW
+2026-11-13 20:00:30 | INFO | Thay đổi trung bình giữa 2 phút liên tiếp: 0.084 kW; 1.93% số lần đổi hơn 1 kW chỉ trong 1 phút
+2026-11-13 20:00:30 | INFO | E0.3: 5 khó khăn dữ liệu, lưu ở data/eda_E0.3_kho_khan.csv
+Tổng số giờ: 34.588 | Giờ có số đo thật: 34.157 | Giờ thiếu (bỏ qua): 431
+Khoảng thời gian: 2006-12-16 17:00:00 -> 2010-11-26 20:00:00
+Số giờ có số đo theo mùa:
+ season
+Xuân    8736
+Hè      8639
+Thu     8549
+Đông    8233
+Name: Global_active_power, dtype: int64
+count    34157.0000
+mean         1.0916
+std          0.8977
+min          0.1240
+25%          0.3419
+50%          0.8026
+75%          1.5793
+max          6.5605
+Name: Global_active_power, dtype: float64
+Độ lệch (skewness): 1.298
+2026-11-13 20:00:31 | INFO | Gợi ý nhận xét E0.4 (số tự điền), lưu ở data/eda_E0.4_goi_y_nhan_xet.md:
+- **[Phân bố]** Công suất trung bình theo giờ có trung bình 1,092 kW, trung vị 0,803 kW, độ lệch chuẩn 0,898 kW; giá trị nhỏ nhất 0,124 kW và lớn nhất 6,561 kW. Độ lệch (skewness) bằng 1,30, phân bố lệch phải: phần lớn các giờ tiêu thụ thấp, thỉnh thoảng có giờ tiêu thụ cao.
+2026-11-13 20:00:32 | INFO | Gợi ý nhận xét E0.5 (số tự điền), lưu ở data/eda_E0.5_goi_y_nhan_xet.md:
+- **[RQ1-giờ]** Công suất trung bình cao nhất lúc 20h (1,899 kW) và thấp nhất lúc 4h (0,444 kW), gấp 4,3 lần. Đỉnh trong khung 5h–12h là lúc 7h (1,502 kW); đỉnh trong khung 17h–23h là lúc 20h (1,899 kW).
+- **[RQ1-cuối tuần]** Trung bình cả ngày: ngày thường 1,035 kW, cuối tuần 1,234 kW; cuối tuần cao hơn ngày thường 19,2%.
+- **[RQ1-cuối tuần]** Chênh lệch giữa cuối tuần và ngày thường lớn nhất lúc 7h: cuối tuần thấp hơn 0,754 kW (0,961 so với 1,715 kW).
+- **[RQ1-thứ]** Thứ có công suất trung bình cao nhất là T7 (1,248 kW), thấp nhất là T5 (0,982 kW); chênh nhau 27,2%.
+Số tháng đo được < 90% số giờ: 2
+2026-11-13 20:00:32 | INFO | Gợi ý nhận xét E0.6 (số tự điền), lưu ở data/eda_E0.6_goi_y_nhan_xet.md:
+- **[RQ1-mùa]** Tháng có công suất trung bình cao nhất là tháng 12 (1,490 kW), thấp nhất là tháng 8 (0,573 kW).
+- **[RQ1-mùa]** Trung bình theo mùa: Xuân 1,103 kW; Hè 0,727 kW; Thu 1,135 kW; Đông 1,418 kW. Mùa cao nhất là Đông, thấp nhất là Hè, chênh nhau 95,1%.
+- **[RQ1-mùa]** Giữa mùa Đông và mùa Hè, chênh lệch theo giờ lớn nhất lúc 20h (Đông 2,493 kW, Hè 1,000 kW).
+- **[RQ1-xu hướng]** Trung bình theo năm vận hành (tháng 12 đến tháng 11): năm 1 1,106 kW; năm 2 1,102 kW; năm 3 1,071 kW; năm 4 1,088 kW. Năm 4 so với năm 1: thấp hơn 1,6%.
+- **[RQ1-xu hướng]** Có 2 tháng đo được dưới 90% số giờ (cần thận trọng khi đọc giá trị các tháng này): 08/2010, 09/2010.
+Các đỉnh ACF cao nhất (độ trễ, hệ số): [(168, 0.461), (24, 0.436), (72, 0.412), (96, 0.403), (48, 0.401), (144, 0.397)]
+2026-11-13 20:00:33 | INFO | Gợi ý nhận xét E0.7 (số tự điền), lưu ở data/eda_E0.7_goi_y_nhan_xet.md:
+- **[RQ1-chu kỳ]** Hệ số tự tương quan tại độ trễ 1 giờ là 0,713; tại 12 giờ là 0,239; tại 24 giờ là 0,436; tại 48 giờ là 0,401; tại 168 giờ là 0,461.
+- **[RQ1-chu kỳ]** Các đỉnh tự tương quan cao nhất (không kể độ trễ 1) xuất hiện tại độ trễ: 168 giờ (0,461), 24 giờ (0,436), 72 giờ (0,412), 96 giờ (0,403), 48 giờ (0,401), 144 giờ (0,397).
+- **[RQ1-công tơ phụ]** Sub_metering_1 đạt trung bình cao nhất lúc 21h (169,2 Wh/giờ), thấp nhất lúc 5h (2,1 Wh/giờ).
+- **[RQ1-công tơ phụ]** Sub_metering_2 đạt trung bình cao nhất lúc 14h (148,5 Wh/giờ), thấp nhất lúc 5h (18,9 Wh/giờ).
+- **[RQ1-công tơ phụ]** Sub_metering_3 đạt trung bình cao nhất lúc 8h (759,5 Wh/giờ), thấp nhất lúc 3h (101,5 Wh/giờ).
+Số giờ dùng cho tương quan (đủ 7 cột): 34.157
+Số giờ dùng: 34.144
+2026-11-13 20:00:34 | INFO | Gợi ý nhận xét E0.8 (số tự điền), lưu ở data/eda_E0.8_goi_y_nhan_xet.md:
+- **[RQ2]** Voltage: Pearson r = -0,379 (mức yếu); Spearman ρ = -0,342 (mức yếu).
+- **[RQ2]** Global_intensity: Pearson r = 0,999 (mức mạnh); Spearman ρ = 0,998 (mức mạnh).
+- **[RQ2]** Sub_metering_1: Pearson r = 0,496 (mức trung bình); Spearman ρ = 0,442 (mức trung bình).
+- **[RQ2]** Sub_metering_2: Pearson r = 0,440 (mức trung bình); Spearman ρ = 0,188 (mức rất yếu). Hai hệ số chênh nhau trên 0,1: quan hệ có thể phi tuyến hoặc chịu ảnh hưởng của giá trị cực đoan.
+- **[RQ2]** Sub_metering_3: Pearson r = 0,696 (mức trung bình); Spearman ρ = 0,694 (mức trung bình).
+- **[RQ2-công tơ phụ]** Tỷ lệ điện năng ba công tơ phụ ghi nhận so với tổng điện năng cả hộ: Sub_metering_1 6,2%; Sub_metering_2 7,1%; Sub_metering_3 35,5%; phần còn lại không qua công tơ phụ nào chiếm 51,2%.
+- **[RQ2-tương quan trễ]** Tương quan Pearson giữa công suất giờ t+1 và biến tại giờ t, xếp từ cao xuống thấp: Global_intensity 0,714; Global_active_power 0,713; Sub_metering_3 0,455; Sub_metering_1 0,297; Voltage -0,288; Sub_metering_2 0,251; Global_reactive_power 0,238.
+- **[RQ2-so sánh]** So sánh với tương quan cùng giờ: Global_intensity cùng giờ có r = 0,999, còn Global_intensity giờ t với công suất giờ t+1 có r = 0,714.
+2026-11-13 20:00:34 | INFO | Tóm tắt khó khăn dữ liệu:
+EDA dữ liệu thô: 2.075.259 dòng × 9 cột, mỗi phút 1 dòng, từ 16/12/2006 17:24 đến 26/11/2010 21:02.
+  1. Giá trị thiếu ghi theo 2 kiểu khác nhau: 6 cột ghi thiếu bằng '?' (25.979 dòng mỗi cột); Sub_metering_3 để trống (25.979 dòng). Đọc mặc định thì 6/7 cột đo thành chuỗi → Khai báo na_values='?' khi đọc để mọi cột đo thành số, ô trống tự thành NaN (01_cleaning, mục 1).
+  2. Thời gian lưu ở 2 cột chuỗi, định dạng ngày kiểu Pháp: Date dạng dd/mm/yyyy, Time dạng hh:mm:ss; 2.075.259 dòng, bước 1 phút, 0 mốc trùng → Gộp Date và Time thành datetime với format '%d/%m/%Y %H:%M:%S' (không để pandas tự đoán, tránh lẫn ngày/tháng) (01_cleaning, mục 1).
+  3. Tháng đầu và tháng cuối không đủ: 2006-12 chỉ có 49% số phút, 2010-11 có 86% → Không so sánh trực tiếp 2 tháng này với tháng khác; khi tính trung bình theo năm dùng năm vận hành tháng 12 đến tháng 11 (02_E0.6 (xu hướng dài hạn)).
+  4. Thiếu thành từng khoảng liền nhau, có khoảng kéo dài nhiều ngày: 25.979 phút thiếu (1.25%) chia thành 71 khoảng; 7 khoảng dài hơn 2 giờ, dài nhất 120.4 giờ; thiếu dồn vào vài tháng (cao nhất 08/2010: 16.2%) → Không điền nhãn mục tiêu; đầu vào chỉ điền tiến tối đa 2 giờ và có cờ báo thiếu; khoảng dài để NaN (01_cleaning, mục 4 và 8).
+  5. Phân bố lệch phải, công tơ phụ phần lớn bằng 0: Global_active_power skew = 1.79; Sub_metering_1 bằng 0 ở 91.7% số phút, Sub_metering_2 70.1% → Ngoại lệ theo IQR chỉ đánh dấu, không xoá (đỉnh tiêu thụ là hành vi thật); với công tơ phụ IQR không dùng được vì đa số bằng 0 (01_cleaning, mục 6).
+  6. Các cột khác đơn vị và khác thang đo: kW, kVAR, V, A, Wh/phút; Voltage quanh 241 V trong khi công suất quanh 1.09 kW → Khi gộp theo giờ: lấy trung bình cho 4 biến điện, lấy tổng cho 3 công tơ phụ (Wh); Linear Regression dùng StandardScaler (01_cleaning, mục 7; pipeline mô hình).
+  7. Global_intensity gần như trùng với biến mục tiêu: r = 0.999 ở mức phút, vì công suất ≈ điện áp × dòng điện → Không dùng Global_intensity của cùng giờ cần dự báo; chỉ dùng giá trị của các giờ trước (trễ) làm đặc trưng (03_features).
+  8. Tổng công tơ phụ đôi khi lớn hơn điện năng cả hộ: 1.050 phút (0.051%), lệch nhiều nhất 2.4 Wh → Chỉ ghi nhận, không sửa (sai số làm tròn và sai số đo của công tơ) (01_cleaning, mục 5).
+  9. Dữ liệu mức phút rất nhiễu: Trung bình mỗi phút công suất đổi 0.084 kW; 1.93% số lần đổi hơn 1 kW trong 1 phút → Gộp thành trung bình theo giờ và dự báo giờ kế tiếp (giờ hợp lệ khi có ít nhất 30 phút đo được) (01_cleaning, mục 7).
+2026-11-13 20:00:34 | INFO | # Câu gợi ý nhận xét EDA (số liệu tự điền từ các notebook E0.4 → E0.8)
+
+- **[Phân bố]** Công suất trung bình theo giờ có trung bình 1,092 kW, trung vị 0,803 kW, độ lệch chuẩn 0,898 kW; giá trị nhỏ nhất 0,124 kW và lớn nhất 6,561 kW. Độ lệch (skewness) bằng 1,30, phân bố lệch phải: phần lớn các giờ tiêu thụ thấp, thỉnh thoảng có giờ tiêu thụ cao.
+- **[RQ1-giờ]** Công suất trung bình cao nhất lúc 20h (1,899 kW) và thấp nhất lúc 4h (0,444 kW), gấp 4,3 lần. Đỉnh trong khung 5h–12h là lúc 7h (1,502 kW); đỉnh trong khung 17h–23h là lúc 20h (1,899 kW).
+- **[RQ1-cuối tuần]** Trung bình cả ngày: ngày thường 1,035 kW, cuối tuần 1,234 kW; cuối tuần cao hơn ngày thường 19,2%.
+- **[RQ1-cuối tuần]** Chênh lệch giữa cuối tuần và ngày thường lớn nhất lúc 7h: cuối tuần thấp hơn 0,754 kW (0,961 so với 1,715 kW).
+- **[RQ1-thứ]** Thứ có công suất trung bình cao nhất là T7 (1,248 kW), thấp nhất là T5 (0,982 kW); chênh nhau 27,2%.
+- **[RQ1-mùa]** Tháng có công suất trung bình cao nhất là tháng 12 (1,490 kW), thấp nhất là tháng 8 (0,573 kW).
+- **[RQ1-mùa]** Trung bình theo mùa: Xuân 1,103 kW; Hè 0,727 kW; Thu 1,135 kW; Đông 1,418 kW. Mùa cao nhất là Đông, thấp nhất là Hè, chênh nhau 95,1%.
+- **[RQ1-mùa]** Giữa mùa Đông và mùa Hè, chênh lệch theo giờ lớn nhất lúc 20h (Đông 2,493 kW, Hè 1,000 kW).
+- **[RQ1-xu hướng]** Trung bình theo năm vận hành (tháng 12 đến tháng 11): năm 1 1,106 kW; năm 2 1,102 kW; năm 3 1,071 kW; năm 4 1,088 kW. Năm 4 so với năm 1: thấp hơn 1,6%.
+- **[RQ1-xu hướng]** Có 2 tháng đo được dưới 90% số giờ (cần thận trọng khi đọc giá trị các tháng này): 08/2010, 09/2010.
+- **[RQ1-chu kỳ]** Hệ số tự tương quan tại độ trễ 1 giờ là 0,713; tại 12 giờ là 0,239; tại 24 giờ là 0,436; tại 48 giờ là 0,401; tại 168 giờ là 0,461.
+- **[RQ1-chu kỳ]** Các đỉnh tự tương quan cao nhất (không kể độ trễ 1) xuất hiện tại độ trễ: 168 giờ (0,461), 24 giờ (0,436), 72 giờ (0,412), 96 giờ (0,403), 48 giờ (0,401), 144 giờ (0,397).
+- **[RQ1-công tơ phụ]** Sub_metering_1 đạt trung bình cao nhất lúc 21h (169,2 Wh/giờ), thấp nhất lúc 5h (2,1 Wh/giờ).
+- **[RQ1-công tơ phụ]** Sub_metering_2 đạt trung bình cao nhất lúc 14h (148,5 Wh/giờ), thấp nhất lúc 5h (18,9 Wh/giờ).
+- **[RQ1-công tơ phụ]** Sub_metering_3 đạt trung bình cao nhất lúc 8h (759,5 Wh/giờ), thấp nhất lúc 3h (101,5 Wh/giờ).
+- **[RQ2]** Voltage: Pearson r = -0,379 (mức yếu); Spearman ρ = -0,342 (mức yếu).
+- **[RQ2]** Global_intensity: Pearson r = 0,999 (mức mạnh); Spearman ρ = 0,998 (mức mạnh).
+- **[RQ2]** Sub_metering_1: Pearson r = 0,496 (mức trung bình); Spearman ρ = 0,442 (mức trung bình).
+- **[RQ2]** Sub_metering_2: Pearson r = 0,440 (mức trung bình); Spearman ρ = 0,188 (mức rất yếu). Hai hệ số chênh nhau trên 0,1: quan hệ có thể phi tuyến hoặc chịu ảnh hưởng của giá trị cực đoan.
+- **[RQ2]** Sub_metering_3: Pearson r = 0,696 (mức trung bình); Spearman ρ = 0,694 (mức trung bình).
+- **[RQ2-công tơ phụ]** Tỷ lệ điện năng ba công tơ phụ ghi nhận so với tổng điện năng cả hộ: Sub_metering_1 6,2%; Sub_metering_2 7,1%; Sub_metering_3 35,5%; phần còn lại không qua công tơ phụ nào chiếm 51,2%.
+- **[RQ2-tương quan trễ]** Tương quan Pearson giữa công suất giờ t+1 và biến tại giờ t, xếp từ cao xuống thấp: Global_intensity 0,714; Global_active_power 0,713; Sub_metering_3 0,455; Sub_metering_1 0,297; Voltage -0,288; Sub_metering_2 0,251; Global_reactive_power 0,238.
+- **[RQ2-so sánh]** So sánh với tương quan cùng giờ: Global_intensity cùng giờ có r = 0,999, còn Global_intensity giờ t với công suất giờ t+1 có r = 0,714.

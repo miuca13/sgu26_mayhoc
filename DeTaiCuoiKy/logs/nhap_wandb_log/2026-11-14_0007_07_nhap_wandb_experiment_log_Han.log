@@ -1,0 +1,510 @@
+2026-11-14 00:07:28 | INFO | Bắt đầu chạy 07_nhap_wandb_experiment_log_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/2026-11-14_0007_07_nhap_wandb_experiment_log_Han.log
+2026-11-14 00:07:28 | INFO | Đọc 21 dòng EXP từ experiment_log.xlsx: EXP-001, EXP-002, EXP-003, EXP-004, EXP-005, EXP-006, EXP-007, EXP-008, EXP-009, EXP-010, EXP-011, EXP-012, EXP-013, EXP-015, EXP-016, EXP-017, EXP-018, EXP-019, EXP-020, EXP-021, EXP-022
+         ID       Ngày Người chạy                                        Mô hình Tập đánh giá      RMSE                                                   ten_run  so_cu
+0   EXP-001 2026-11-01       Linh                                      Naive t-1     CV-Train  0.684100                        ck-EXP-001-linh-naive-t-1-cv-train  False
+1   EXP-002 2026-11-01       Linh                                      Naive t-1        Train  0.695500                           ck-EXP-002-linh-naive-t-1-train  False
+2   EXP-003 2026-11-01       Linh                                     Naive t-24     CV-Train  0.941400                       ck-EXP-003-linh-naive-t-24-cv-train  False
+3   EXP-004 2026-11-01       Linh                                     Naive t-24        Train  0.985100                          ck-EXP-004-linh-naive-t-24-train  False
+4   EXP-005 2026-11-01       Linh                              Linear Regression     CV-Train  0.593300                ck-EXP-005-linh-linear-regression-cv-train  False
+5   EXP-006 2026-11-01       Linh                              Linear Regression        Train  0.602100                   ck-EXP-006-linh-linear-regression-train  False
+6   EXP-007 2026-11-02      Nhung                         Random Forest mặc định     CV-Train  0.555470          ck-EXP-007-nhung-random-forest-mac-dinh-cv-train   True
+7   EXP-008 2026-11-02      Nhung                               XGBoost mặc định     CV-Train  0.566362                ck-EXP-008-nhung-xgboost-mac-dinh-cv-train   True
+8   EXP-009 2026-11-02      Nhung  XGBoost GridSearchCV (chọn cấu hình tốt nhất)     CV-Train  0.527701  ck-EXP-009-nhung-xgboost-gridsearchcv-chon-cau--cv-train   True
+9   EXP-010 2026-11-02      Nhung                          XGBoost tối ưu (Test)         Test  0.473700                 ck-EXP-010-nhung-xgboost-toi-uu-test-test   True
+10  EXP-011 2026-11-03      Nhung                         Random Forest mặc định     CV-Train  0.557298          ck-EXP-011-nhung-random-forest-mac-dinh-cv-train  False
+11  EXP-012 2026-11-03      Nhung                               XGBoost mặc định     CV-Train  0.581444                ck-EXP-012-nhung-xgboost-mac-dinh-cv-train  False
+12  EXP-013 2026-11-03      Nhung                                 XGBoost tối ưu     CV-Train  0.529373                  ck-EXP-013-nhung-xgboost-toi-uu-cv-train  False
+13  EXP-015 2026-11-03      Nhung                         Random Forest mặc định        Train  0.199900             ck-EXP-015-nhung-random-forest-mac-dinh-train  False
+14  EXP-016 2026-11-03      Nhung                               XGBoost mặc định        Train  0.345300                   ck-EXP-016-nhung-xgboost-mac-dinh-train  False
+15  EXP-017 2026-11-03      Nhung                                 XGBoost tối ưu        Train  0.469700                     ck-EXP-017-nhung-xgboost-toi-uu-train  False
+16  EXP-018 2026-11-03      Nhung                                      Naive t-1         Test  0.628200                           ck-EXP-018-nhung-naive-t-1-test  False
+17  EXP-019 2026-11-03      Nhung                                     Naive t-24         Test  0.841100                          ck-EXP-019-nhung-naive-t-24-test  False
+18  EXP-020 2026-11-03      Nhung                              Linear Regression         Test  0.547100                   ck-EXP-020-nhung-linear-regression-test  False
+19  EXP-021 2026-11-03      Nhung                         Random Forest mặc định         Test  0.484100              ck-EXP-021-nhung-random-forest-mac-dinh-test  False
+20  EXP-022 2026-11-03      Nhung                                 XGBoost tối ưu         Test  0.475000                      ck-EXP-022-nhung-xgboost-toi-uu-test  False
+2026-11-14 00:07:28 | INFO | Đã có trên W&B từ trước: chưa có
+[34m[1mwandb[0m: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from /Users/caongochan/.netrc.
+[34m[1mwandb[0m: Currently logged in as: [33mcaongochan142[0m ([33msgu-mayhoc-nhom11[0m) to [32mhttps://api.forge.coreweave.com[0m. Use [1m`wandb login --relogin`[0m to force relogin
+[34m[1mwandb[0m: [33mWARNING[0m Using a boolean value for 'reinit' is deprecated. Use 'return_previous' or 'finish_previous' instead.
+[34m[1mwandb[0m: setting up run tb3shrt7
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000730-tb3shrt7[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-001-linh-naive-t-1-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tb3shrt7[0m
+2026-11-14 00:07:31 | INFO | EXP-001 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tb3shrt7
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.4416
+[34m[1mwandb[0m:               R2 0.3962
+[34m[1mwandb[0m:             RMSE 0.6841
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-001-linh-naive-t-1-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tb3shrt7[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000730-tb3shrt7/logs[0m
+[34m[1mwandb[0m: setting up run s5b5pfuq
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000736-s5b5pfuq[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-002-linh-naive-t-1-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/s5b5pfuq[0m
+2026-11-14 00:07:38 | INFO | EXP-002 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/s5b5pfuq
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt; uploading output.log
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.4483
+[34m[1mwandb[0m:               R2 0.4328
+[34m[1mwandb[0m:             RMSE 0.6955
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-002-linh-naive-t-1-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/s5b5pfuq[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000736-s5b5pfuq/logs[0m
+[34m[1mwandb[0m: setting up run q8w8msi6
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000743-q8w8msi6[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-003-linh-naive-t-24-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/q8w8msi6[0m
+2026-11-14 00:07:44 | INFO | EXP-003 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/q8w8msi6
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.6296
+[34m[1mwandb[0m:               R2 -0.1407
+[34m[1mwandb[0m:             RMSE 0.9414
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-003-linh-naive-t-24-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/q8w8msi6[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000743-q8w8msi6/logs[0m
+[34m[1mwandb[0m: setting up run uck4rgi0
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000749-uck4rgi0[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-004-linh-naive-t-24-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/uck4rgi0[0m
+2026-11-14 00:07:50 | INFO | EXP-004 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/uck4rgi0
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading config.yaml
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.6605
+[34m[1mwandb[0m:               R2 -0.1377
+[34m[1mwandb[0m:             RMSE 0.9851
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-004-linh-naive-t-24-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/uck4rgi0[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000749-uck4rgi0/logs[0m
+[34m[1mwandb[0m: setting up run 99o7o4le
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000754-99o7o4le[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-005-linh-linear-regression-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/99o7o4le[0m
+2026-11-14 00:07:55 | INFO | EXP-005 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/99o7o4le
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-summary.json
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.4203
+[34m[1mwandb[0m:               R2 0.546
+[34m[1mwandb[0m:             RMSE 0.5933
+[34m[1mwandb[0m: thoi_gian_chay_s 0.3
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-005-linh-linear-regression-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/99o7o4le[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000754-99o7o4le/logs[0m
+[34m[1mwandb[0m: setting up run byvip8sy
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000759-byvip8sy[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-006-linh-linear-regression-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/byvip8sy[0m
+2026-11-14 00:08:00 | INFO | EXP-006 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/byvip8sy
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.4288
+[34m[1mwandb[0m:               R2 0.575
+[34m[1mwandb[0m:             RMSE 0.6021
+[34m[1mwandb[0m: thoi_gian_chay_s 0.3
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-006-linh-linear-regression-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/byvip8sy[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000759-byvip8sy/logs[0m
+[34m[1mwandb[0m: setting up run x6wunyq0
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000805-x6wunyq0[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-007-nhung-random-forest-mac-dinh-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/x6wunyq0[0m
+2026-11-14 00:08:06 | INFO | EXP-007 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/x6wunyq0
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3936
+[34m[1mwandb[0m:               R2 0.6005
+[34m[1mwandb[0m:             RMSE 0.55547
+[34m[1mwandb[0m: thoi_gian_chay_s 346.14497
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-007-nhung-random-forest-mac-dinh-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/x6wunyq0[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000805-x6wunyq0/logs[0m
+[34m[1mwandb[0m: setting up run jyu6cz8t
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000810-jyu6cz8t[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-008-nhung-xgboost-mac-dinh-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/jyu6cz8t[0m
+2026-11-14 00:08:11 | INFO | EXP-008 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/jyu6cz8t
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading output.log; uploading wandb-summary.json
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.40518
+[34m[1mwandb[0m:               R2 0.58601
+[34m[1mwandb[0m:             RMSE 0.56636
+[34m[1mwandb[0m: thoi_gian_chay_s 6.30604
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-008-nhung-xgboost-mac-dinh-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/jyu6cz8t[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000810-jyu6cz8t/logs[0m
+[34m[1mwandb[0m: setting up run ysqwg7jd
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000816-ysqwg7jd[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-009-nhung-xgboost-gridsearchcv-chon-cau--cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/ysqwg7jd[0m
+2026-11-14 00:08:17 | INFO | EXP-009 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/ysqwg7jd
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json
+[34m[1mwandb[0m: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading output.log; uploading config.yaml
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.36836
+[34m[1mwandb[0m:               R2 0.64034
+[34m[1mwandb[0m:             RMSE 0.5277
+[34m[1mwandb[0m: thoi_gian_chay_s 56.21616
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-009-nhung-xgboost-gridsearchcv-chon-cau--cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/ysqwg7jd[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000816-ysqwg7jd/logs[0m
+[34m[1mwandb[0m: setting up run esvak586
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000821-esvak586[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-010-nhung-xgboost-toi-uu-test-test[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/esvak586[0m
+2026-11-14 00:08:22 | INFO | EXP-010 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/esvak586
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading summary
+[34m[1mwandb[0m: uploading summary; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml (+ 1 more)
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json
+[34m[1mwandb[0m: uploading output.log; uploading config.yaml
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3287
+[34m[1mwandb[0m:               R2 0.6511
+[34m[1mwandb[0m:             RMSE 0.4737
+[34m[1mwandb[0m: thoi_gian_chay_s 0.03621
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-010-nhung-xgboost-toi-uu-test-test[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/esvak586[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000821-esvak586/logs[0m
+[34m[1mwandb[0m: setting up run swp3wlm5
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000829-swp3wlm5[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-011-nhung-random-forest-mac-dinh-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/swp3wlm5[0m
+2026-11-14 00:08:30 | INFO | EXP-011 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/swp3wlm5
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt
+[34m[1mwandb[0m: uploading output.log; uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt
+[34m[1mwandb[0m: uploading wandb-metadata.json
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3946
+[34m[1mwandb[0m:               R2 0.59983
+[34m[1mwandb[0m:             RMSE 0.5573
+[34m[1mwandb[0m: thoi_gian_chay_s 219.1407
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-011-nhung-random-forest-mac-dinh-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/swp3wlm5[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000829-swp3wlm5/logs[0m
+[34m[1mwandb[0m: setting up run fi8jybwc
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000834-fi8jybwc[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-012-nhung-xgboost-mac-dinh-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/fi8jybwc[0m
+2026-11-14 00:08:36 | INFO | EXP-012 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/fi8jybwc
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: updating run metadata
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.41545
+[34m[1mwandb[0m:               R2 0.56532
+[34m[1mwandb[0m:             RMSE 0.58144
+[34m[1mwandb[0m: thoi_gian_chay_s 6.2439
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-012-nhung-xgboost-mac-dinh-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/fi8jybwc[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000834-fi8jybwc/logs[0m
+[34m[1mwandb[0m: setting up run 7ts5e9ei
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000840-7ts5e9ei[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-013-nhung-xgboost-toi-uu-cv-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/7ts5e9ei[0m
+2026-11-14 00:08:41 | INFO | EXP-013 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/7ts5e9ei
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt; uploading output.log
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.36872
+[34m[1mwandb[0m:               R2 0.63997
+[34m[1mwandb[0m:             RMSE 0.52937
+[34m[1mwandb[0m: thoi_gian_chay_s 58.8748
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-013-nhung-xgboost-toi-uu-cv-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/7ts5e9ei[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000840-7ts5e9ei/logs[0m
+[34m[1mwandb[0m: setting up run tfk8reyi
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000844-tfk8reyi[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-015-nhung-random-forest-mac-dinh-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tfk8reyi[0m
+2026-11-14 00:08:46 | INFO | EXP-015 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tfk8reyi
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.1317
+[34m[1mwandb[0m:               R2 0.9532
+[34m[1mwandb[0m:             RMSE 0.1999
+[34m[1mwandb[0m: thoi_gian_chay_s 105.5074
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-015-nhung-random-forest-mac-dinh-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tfk8reyi[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000844-tfk8reyi/logs[0m
+[34m[1mwandb[0m: setting up run 05oo7bkt
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000851-05oo7bkt[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-016-nhung-xgboost-mac-dinh-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/05oo7bkt[0m
+2026-11-14 00:08:52 | INFO | EXP-016 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/05oo7bkt
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log
+[34m[1mwandb[0m: uploading output.log
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.2375
+[34m[1mwandb[0m:               R2 0.8602
+[34m[1mwandb[0m:             RMSE 0.3453
+[34m[1mwandb[0m: thoi_gian_chay_s 1.42
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-016-nhung-xgboost-mac-dinh-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/05oo7bkt[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000851-05oo7bkt/logs[0m
+[34m[1mwandb[0m: setting up run yr0h75q6
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000858-yr0h75q6[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-017-nhung-xgboost-toi-uu-train[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/yr0h75q6[0m
+2026-11-14 00:08:59 | INFO | EXP-017 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/yr0h75q6
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: updating run metadata
+[34m[1mwandb[0m: uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3189
+[34m[1mwandb[0m:               R2 0.7414
+[34m[1mwandb[0m:             RMSE 0.4697
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-017-nhung-xgboost-toi-uu-train[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/yr0h75q6[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000858-yr0h75q6/logs[0m
+[34m[1mwandb[0m: setting up run w98jwaws
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000903-w98jwaws[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-018-nhung-naive-t-1-test[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/w98jwaws[0m
+2026-11-14 00:09:04 | INFO | EXP-018 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/w98jwaws
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading config.yaml
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.4156
+[34m[1mwandb[0m:               R2 0.3884
+[34m[1mwandb[0m:             RMSE 0.6282
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-018-nhung-naive-t-1-test[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/w98jwaws[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000903-w98jwaws/logs[0m
+[34m[1mwandb[0m: setting up run h0f7adkr
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000908-h0f7adkr[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-019-nhung-naive-t-24-test[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/h0f7adkr[0m
+2026-11-14 00:09:09 | INFO | EXP-019 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/h0f7adkr
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading output.log
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.5721
+[34m[1mwandb[0m:               R2 -0.0964
+[34m[1mwandb[0m:             RMSE 0.8411
+[34m[1mwandb[0m: thoi_gian_chay_s 0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-019-nhung-naive-t-24-test[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/h0f7adkr[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000908-h0f7adkr/logs[0m
+[34m[1mwandb[0m: setting up run wk9r338p
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000914-wk9r338p[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-020-nhung-linear-regression-test[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/wk9r338p[0m
+2026-11-14 00:09:16 | INFO | EXP-020 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/wk9r338p
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading config.yaml
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3941
+[34m[1mwandb[0m:               R2 0.5361
+[34m[1mwandb[0m:             RMSE 0.5471
+[34m[1mwandb[0m: thoi_gian_chay_s 0.0107
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-020-nhung-linear-regression-test[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/wk9r338p[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000914-wk9r338p/logs[0m
+[34m[1mwandb[0m: setting up run tl4a1t68
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000921-tl4a1t68[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-021-nhung-random-forest-mac-dinh-test[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tl4a1t68[0m
+2026-11-14 00:09:22 | INFO | EXP-021 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tl4a1t68
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3365
+[34m[1mwandb[0m:               R2 0.6367
+[34m[1mwandb[0m:             RMSE 0.4841
+[34m[1mwandb[0m: thoi_gian_chay_s 0.3913
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-021-nhung-random-forest-mac-dinh-test[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/tl4a1t68[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000921-tl4a1t68/logs[0m
+[34m[1mwandb[0m: setting up run ao1hhdu0
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/wandb/run-20261114_000926-ao1hhdu0[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-EXP-022-nhung-xgboost-toi-uu-test[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/ao1hhdu0[0m
+2026-11-14 00:09:27 | INFO | EXP-022 → https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/ao1hhdu0
+[34m[1mwandb[0m: updating run metadata; uploading summary
+[34m[1mwandb[0m: updating run metadata
+[34m[1mwandb[0m: uploading wandb-metadata.json; uploading requirements.txt; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+[34m[1mwandb[0m: uploading wandb-summary.json
+[34m[1mwandb[0m: uploading summary, console lines 0-0
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:              MAE 0.3292
+[34m[1mwandb[0m:               R2 0.6504
+[34m[1mwandb[0m:             RMSE 0.475
+[34m[1mwandb[0m: thoi_gian_chay_s 0.0231
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-EXP-022-nhung-xgboost-toi-uu-test[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/ao1hhdu0[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000926-ao1hhdu0/logs[0m
+2026-11-14 00:09:30 | INFO | Đã ghi 21 run mới; danh sách link ở logs/wandb_links_experiment_log.csv

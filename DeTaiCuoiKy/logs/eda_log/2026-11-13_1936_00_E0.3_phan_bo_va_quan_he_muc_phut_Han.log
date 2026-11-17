@@ -1,0 +1,13 @@
+2026-11-13 19:36:53 | INFO | Bắt đầu chạy 00_E0.3_phan_bo_va_quan_he_muc_phut_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/2026-11-13_1936_00_E0.3_phan_bo_va_quan_he_muc_phut_Han.log
+2026-11-13 19:36:54 | INFO | ROOT: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy
+2026-11-13 19:36:54 | INFO | File dữ liệu: individual+household+electric+power+consumption.zip (19.68 MB)
+2026-11-13 19:36:58 | INFO | Đã đọc 2.075.259 dòng, từ 16/12/2006 17:24 đến 26/11/2010 21:02
+2026-11-13 19:37:01 | INFO | Độ lệch Global_active_power mức phút: 1.79
+2026-11-13 19:37:01 | INFO | Tỉ lệ giá trị bằng 0: Sub_metering_1 91.7%; Sub_metering_2 70.1%; Sub_metering_3 41.6%
+2026-11-13 19:37:01 | INFO | Tương quan Global_active_power – Global_intensity (mức phút): r = 0.9989
+2026-11-13 19:37:01 | INFO | P / (V × I): trung vị 0.992; 5.75% số phút lớn hơn 1,05
+2026-11-13 19:37:01 | INFO | Phút có tổng 3 công tơ phụ lớn hơn điện năng cả hộ: 1.050 (0.051%), âm nhiều nhất -2.4 Wh
+2026-11-13 19:37:01 | INFO | Tỉ trọng điện năng: Sub_metering_1 6.2%; Sub_metering_2 7.1%; Sub_metering_3 35.5%; còn lại 51.2%
+2026-11-13 19:37:01 | INFO | Ngày minh hoạ 01/01/2008: độ lệch chuẩn mức phút 1.026 kW, mức giờ 0.803 kW
+2026-11-13 19:37:01 | INFO | Thay đổi trung bình giữa 2 phút liên tiếp: 0.084 kW; 1.93% số lần đổi hơn 1 kW chỉ trong 1 phút
+2026-11-13 19:37:02 | INFO | E0.3: 5 khó khăn dữ liệu, lưu ở data/eda_E0.3_kho_khan.csv

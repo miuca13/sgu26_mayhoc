@@ -1,0 +1,38 @@
+2026-11-14 00:01:38 | INFO | Bắt đầu chạy 02_E0.6_rq1_theo_thang_mua_xu_huong_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/eda_log/2026-11-14_0001_02_E0.6_rq1_theo_thang_mua_xu_huong_Han.log
+Tổng số giờ: 34.588 | Giờ có số đo thật: 34.157 | Giờ thiếu (bỏ qua): 431
+Khoảng thời gian: 2006-12-16 17:00:00 -> 2010-11-26 20:00:00
+Số giờ có số đo theo mùa:
+ season
+Xuân    8736
+Hè      8639
+Thu     8549
+Đông    8233
+Name: Global_active_power, dtype: int64
+Số tháng đo được < 90% số giờ: 2
+2026-11-14 00:01:39 | INFO | Gợi ý nhận xét E0.6 (số tự điền), lưu ở data/eda_E0.6_goi_y_nhan_xet.md:
+- **[RQ1-mùa]** Tháng có công suất trung bình cao nhất là tháng 12 (1,490 kW), thấp nhất là tháng 8 (0,573 kW).
+- **[RQ1-mùa]** Trung bình theo mùa: Xuân 1,103 kW; Hè 0,727 kW; Thu 1,135 kW; Đông 1,418 kW. Mùa cao nhất là Đông, thấp nhất là Hè, chênh nhau 95,1%.
+- **[RQ1-mùa]** Giữa mùa Đông và mùa Hè, chênh lệch theo giờ lớn nhất lúc 20h (Đông 2,493 kW, Hè 1,000 kW).
+- **[RQ1-xu hướng]** Trung bình theo năm vận hành (tháng 12 đến tháng 11): năm 1 1,106 kW; năm 2 1,102 kW; năm 3 1,071 kW; năm 4 1,088 kW. Năm 4 so với năm 1: thấp hơn 1,6%.
+- **[RQ1-xu hướng]** Có 2 tháng đo được dưới 90% số giờ (cần thận trọng khi đọc giá trị các tháng này): 08/2010, 09/2010.
+[34m[1mwandb[0m: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from /Users/caongochan/.netrc.
+[34m[1mwandb[0m: Currently logged in as: [33mcaongochan142[0m ([33msgu-mayhoc-nhom11[0m) to [32mhttps://api.forge.coreweave.com[0m. Use [1m`wandb login --relogin`[0m to force relogin
+[34m[1mwandb[0m: setting up run 9mi1biar
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/eda/wandb/run-20261114_000140-9mi1biar[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-E0.6-Han-rq1-theo-thang-mua-xu-huong[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/9mi1biar[0m
+2026-11-14 00:01:42 | INFO | Đã ghi W&B: https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/9mi1biar
+[34m[1mwandb[0m: updating run metadata; uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_mua-2PzxkA; uploading artifact run-9mi1biar-bangeda_rq1_theo_nam-RYRmSQ; uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_chuoi-KkUWiA
+[34m[1mwandb[0m: uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_mua-2PzxkA; uploading artifact run-9mi1biar-bangeda_rq1_theo_nam-RYRmSQ; uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_chuoi-KkUWiA
+[34m[1mwandb[0m: uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_mua-2PzxkA; uploading artifact run-9mi1biar-bangeda_rq1_theo_nam-RYRmSQ; uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_chuoi-KkUWiA; uploading wandb-metadata.json; uploading requirements.txt (+ 9 more)
+[34m[1mwandb[0m: uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_mua-2PzxkA; uploading artifact run-9mi1biar-bangeda_rq1_theo_nam-RYRmSQ; uploading requirements.txt; uploading media/table/bang/eda_rq1_theo_thang_chuoi_0_a017c48bc922dad0727c.table.json; uploading media/images/hinh/02_rq1_xu_huong_0_3c5326b85b468df531a2.png (+ 7 more)
+[34m[1mwandb[0m: uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_mua-2PzxkA; uploading artifact run-9mi1biar-bangeda_rq1_theo_nam-RYRmSQ; uploading media/images/hinh/02_rq1_xu_huong_0_3c5326b85b468df531a2.png; uploading media/table/bang/eda_rq1_theo_thang_mua_0_6f074bace8e0fb2edda8.table.json; uploading media/table/bang/eda_rq1_theo_nam_0_29935ef49cbb2a6afec9.table.json (+ 3 more)
+[34m[1mwandb[0m: uploading artifact run-9mi1biar-bangeda_rq1_theo_thang_mua-2PzxkA; uploading artifact run-9mi1biar-bangeda_rq1_theo_nam-RYRmSQ; uploading media/images/hinh/02_rq1_theo_thang_mua_0_f167573167def87bfa59.png
+[34m[1mwandb[0m: uploading history steps 0-0, summary, console lines 0-0
+[34m[1mwandb[0m: 🚀 View run [33mck-E0.6-Han-rq1-theo-thang-mua-xu-huong[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/9mi1biar[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 6 media file(s), 6 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000140-9mi1biar/logs[0m

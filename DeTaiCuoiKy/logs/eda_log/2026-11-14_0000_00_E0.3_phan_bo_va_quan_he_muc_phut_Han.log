@@ -1,0 +1,39 @@
+2026-11-14 00:00:52 | INFO | Bắt đầu chạy 00_E0.3_phan_bo_va_quan_he_muc_phut_Han – người chạy: Han – file log: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/logs/eda_log/2026-11-14_0000_00_E0.3_phan_bo_va_quan_he_muc_phut_Han.log
+2026-11-14 00:00:52 | INFO | ROOT: /Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy
+2026-11-14 00:00:52 | INFO | File dữ liệu: individual+household+electric+power+consumption.zip (19.68 MB)
+2026-11-14 00:00:56 | INFO | Đã đọc 2.075.259 dòng, từ 16/12/2006 17:24 đến 26/11/2010 21:02
+2026-11-14 00:00:59 | INFO | Độ lệch Global_active_power mức phút: 1.79
+2026-11-14 00:00:59 | INFO | Tỉ lệ giá trị bằng 0: Sub_metering_1 91.7%; Sub_metering_2 70.1%; Sub_metering_3 41.6%
+2026-11-14 00:00:59 | INFO | Tương quan Global_active_power – Global_intensity (mức phút): r = 0.9989
+2026-11-14 00:00:59 | INFO | P / (V × I): trung vị 0.992; 5.75% số phút lớn hơn 1,05
+2026-11-14 00:00:59 | INFO | Phút có tổng 3 công tơ phụ lớn hơn điện năng cả hộ: 1.050 (0.051%), âm nhiều nhất -2.4 Wh
+2026-11-14 00:00:59 | INFO | Tỉ trọng điện năng: Sub_metering_1 6.2%; Sub_metering_2 7.1%; Sub_metering_3 35.5%; còn lại 51.2%
+2026-11-14 00:00:59 | INFO | Ngày minh hoạ 01/01/2008: độ lệch chuẩn mức phút 1.026 kW, mức giờ 0.803 kW
+2026-11-14 00:00:59 | INFO | Thay đổi trung bình giữa 2 phút liên tiếp: 0.084 kW; 1.93% số lần đổi hơn 1 kW chỉ trong 1 phút
+2026-11-14 00:00:59 | INFO | E0.3: 5 khó khăn dữ liệu, lưu ở data/eda_E0.3_kho_khan.csv
+[34m[1mwandb[0m: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from /Users/caongochan/.netrc.
+[34m[1mwandb[0m: Currently logged in as: [33mcaongochan142[0m ([33msgu-mayhoc-nhom11[0m) to [32mhttps://api.forge.coreweave.com[0m. Use [1m`wandb login --relogin`[0m to force relogin
+[34m[1mwandb[0m: setting up run byu69e9z
+[34m[1mwandb[0m: Tracking run with wandb version 0.31.0
+[34m[1mwandb[0m: Run data is saved locally in [35m[1m/Users/caongochan/Documents/Nhom11_DuBaoDienNang_GiuaKy/notebooks/eda/wandb/run-20261114_000101-byu69e9z[0m
+[34m[1mwandb[0m: Run [1m`wandb offline`[0m to turn off syncing.
+[34m[1mwandb[0m: Syncing run [33mck-E0.3-Han-phan-bo-va-quan-he-muc-phut[0m
+[34m[1mwandb[0m: ⭐️ View project at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: 🚀 View run at [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/byu69e9z[0m
+2026-11-14 00:01:03 | INFO | Đã ghi W&B: https://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/byu69e9z
+[34m[1mwandb[0m: updating run metadata; uploading artifact run-byu69e9z-bangeda_00_thong_ke_phut-kknFxw; uploading artifact run-byu69e9z-bangeda_E0.3_kho_khan-uz8UrA
+[34m[1mwandb[0m: uploading artifact run-byu69e9z-bangeda_00_thong_ke_phut-kknFxw; uploading artifact run-byu69e9z-bangeda_E0.3_kho_khan-uz8UrA
+[34m[1mwandb[0m: uploading artifact run-byu69e9z-bangeda_00_thong_ke_phut-kknFxw; uploading artifact run-byu69e9z-bangeda_E0.3_kho_khan-uz8UrA; uploading media/table/bang/eda_E0.3_kho_khan_0_b23204528b305abcc461.table.json; uploading media/images/hinh/00_mot_ngay_phut_va_gio_0_d99472440e4b48b6bdc3.png; uploading wandb-summary.json (+ 8 more)
+[34m[1mwandb[0m: uploading artifact run-byu69e9z-bangeda_00_thong_ke_phut-kknFxw; uploading media/images/hinh/00_phan_bo_7_bien_phut_0_83b3625253e303ef3d18.png; uploading media/images/hinh/00_cong_suat_va_dong_dien_0_af6f552bc8a843c2c7ca.png; uploading media/html/ket_luan_0_a31dfc46fc11f915b0be.html; uploading output.log
+[34m[1mwandb[0m: uploading artifact run-byu69e9z-bangeda_00_thong_ke_phut-kknFxw; uploading media/images/hinh/00_phan_bo_7_bien_phut_0_83b3625253e303ef3d18.png
+[34m[1mwandb[0m: uploading artifact run-byu69e9z-bangeda_00_thong_ke_phut-kknFxw
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: Run summary:
+[34m[1mwandb[0m:    r_cong_suat_dong_dien_phut 0.99889
+[34m[1mwandb[0m: skew_global_active_power_phut 1.78623
+[34m[1mwandb[0m:      so_phut_cong_to_phu_vuot 1050
+[34m[1mwandb[0m: 
+[34m[1mwandb[0m: 🚀 View run [33mck-E0.3-Han-phan-bo-va-quan-he-muc-phut[0m at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang/runs/byu69e9z[0m
+[34m[1mwandb[0m: ⭐️ View project at: [34m[4mhttps://forge.coreweave.com/wandb/sgu-mayhoc-nhom11/cuoi-ky-du-bao-dien-nang[0m
+[34m[1mwandb[0m: Synced 5 W&B file(s), 6 media file(s), 4 artifact file(s) and 0 other file(s)
+[34m[1mwandb[0m: Find logs at: [35m[1m./wandb/run-20261114_000101-byu69e9z/logs[0m
